@@ -21,7 +21,8 @@ public class SecurityConfiguration {
         // Protect endpoints at /api/<type>/secure
         http.authorizeRequests(configurer ->
                         configurer
-                                .requestMatchers("/shcms/doctors/secure/**")
+                                .requestMatchers("/shcms/doctors/secure/**",
+                                        "/shcms/reviews/secure/**")
                                 .authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
