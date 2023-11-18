@@ -1,6 +1,7 @@
 package com.averysync.shcmsbackend.config;
 
 import com.averysync.shcmsbackend.entity.Doctor;
+import com.averysync.shcmsbackend.entity.Review;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -21,8 +22,10 @@ public class CustomDataRestConfig implements RepositoryRestConfigurer {
                 HttpMethod.PUT};
 
         repositoryRestConfiguration.exposeIdsFor(Doctor.class);
+        repositoryRestConfiguration.exposeIdsFor(Review.class);
 
         disableHttpMethods(Doctor.class, repositoryRestConfiguration, blockHttpMethods);
+        disableHttpMethods(Review.class, repositoryRestConfiguration, blockHttpMethods);
 
         /* Configure CORS Mapping */
         corsRegistry.addMapping(repositoryRestConfiguration.getBasePath() + "/**")
