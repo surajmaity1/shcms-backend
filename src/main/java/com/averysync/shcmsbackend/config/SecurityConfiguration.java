@@ -23,7 +23,8 @@ public class SecurityConfiguration {
                         configurer
                                 .requestMatchers("/shcms/doctors/secure/**",
                                         "/shcms/reviews/secure/**",
-                                        "/shcms/queries/secure/**")
+                                        "/shcms/queries/secure/**",
+                                        "/shcms/admin/secure/**")
                                 .authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
 
