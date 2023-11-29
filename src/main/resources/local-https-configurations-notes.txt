@@ -1,0 +1,27 @@
+keytool -genkeypair -alias shcms -keystore src/main/resources/shcms-keystore.p12 -keypass secret -storeType PKCS12 -storepass secret -keyalg RSA -keysize 2048 -validity 365 -dname "C=IN, ST=WEST BENGAL, L=HALDIA, O=shcms, OU=shcms, CN=localhost" -ext "SAN=dns:localhost"
+
+
+
+
+
+#####
+#
+# HTTPS configuration
+#
+#####
+# Server web port
+server.port=8443
+# Enable HTTPS support (only accept HTTPS requests)
+server.ssl.enabled=true
+# Alias that identifies the key in the key store
+server.ssl.key-alias=shcms
+# Keystore location
+server.ssl.key-store=classpath:shcms-keystore.p12
+# Keystore password
+server.ssl.key-store-password=secret
+# Keystore format
+server.ssl.key-store-type=PKCS12
+
+
+
+keytool -list -v -alias shcms -keystore src/main/resources/shcms-keystore.p12 -storepass secret

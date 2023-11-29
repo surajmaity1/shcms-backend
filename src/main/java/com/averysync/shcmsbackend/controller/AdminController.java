@@ -6,7 +6,7 @@ import com.averysync.shcmsbackend.utils.ExtractJWT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("https://localhost:3000")
+@CrossOrigin("https://main.d5vpw8xlywhxl.amplifyapp.com")
 @RestController
 @RequestMapping("/shcms/admin")
 public class AdminController {
