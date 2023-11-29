@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configuration
 public class CustomDataRestConfig implements RepositoryRestConfigurer {
-    private String allowedUrlForFrontend = "http://localhost:3000";
+    private String allowedUrlForFrontend = "https://localhost:3000";
 
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration repositoryRestConfiguration,
