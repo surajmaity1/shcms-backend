@@ -5,7 +5,7 @@ import com.averysync.shcmsbackend.service.ReviewService;
 import com.averysync.shcmsbackend.utils.ExtractJWT;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("https://main.d5vpw8xlywhxl.amplifyapp.com")
+@CrossOrigin("https://localhost:3000")
 @RestController
 @RequestMapping("/shcms/reviews")
 public class ReviewController {

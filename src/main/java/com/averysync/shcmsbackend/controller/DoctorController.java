@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("https://main.d5vpw8xlywhxl.amplifyapp.com")
+@CrossOrigin("https://localhost:3000")
 @RestController
 @RequestMapping("/shcms/doctors")
 public class DoctorController {
